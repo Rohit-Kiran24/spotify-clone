@@ -241,3 +241,126 @@ align-items: center;
     border-radius: 100%;
     margin-top: -6px;
 }
+
+/* Search container styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    width: 300px;
+}
+
+.search-container i {
+    color: #b3b3b3;
+    margin-right: 0.5rem;
+}
+
+.search-container input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.search-container input::placeholder {
+    color: #b3b3b3;
+}
+
+/* Album info styles */
+.album-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.song-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.artist-name {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+}
+
+/* Volume control styles */
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.volume-control i {
+    color: #b3b3b3;
+}
+
+.volume-bar {
+    width: 100px;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: #1bd760;
+    border-radius: 100%;
+    margin-top: -3px;
+}
+
+/* Card hover effects */
+.card {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #2a2a2a;
+}
+
+/* Player control hover effects */
+.player-control-icon {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.player-control-icon:hover {
+    opacity: 1 !important;
+}
+
+/* Progress bar hover effect */
+.progress-bar:hover::-webkit-slider-thumb {
+    background-color: #1ed760;
+}
+
+/* Responsive design improvements */
+@media (max-width: 1200px) {
+    .search-container {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        display: none;
+    }
+    
+    .volume-control {
+        display: none;
+    }
+    
+    .album-info {
+        display: none;
+    }
+}
